@@ -19,15 +19,15 @@ public class ElementsPage extends BasePage {
 
     }
     @FindBy(xpath = "//div[@class='element-group']//div[text()='Alerts, Frame & Windows']")
-    public WebElement alertFrameWindows;
+    public WebElement alertFrameWindowsTiles;
 
     @FindBy(xpath = "//span[text()='Alerts']")
     public WebElement alertOption;
 
 
-    public void alertModule(){
+ /*   public void alertModule(){
         Driver.getDriver().findElement(By.xpath("//span[text()='" + alert+"']")).click();
     }
-
+*/
 }
 

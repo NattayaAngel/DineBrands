@@ -6,7 +6,7 @@ import com.nattaya.qa.utilities.BrowserUtils;
 import com.nattaya.qa.utilities.Driver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.NoAlertPresentException;
 
 public class Alert_steps {
@@ -14,21 +14,21 @@ public class Alert_steps {
     ElementsPage elementsPage = new ElementsPage();
     AlertsPage alertsPage = new AlertsPage();
 
-    @When("user selects {string}")
-    public void user_select_(String string) {
+    @And("user selects Alert, Frame, & Windows")
+    public void user_selects_alerts_frame_windows_tile_from_the_side_menu() {
         BrowserUtils.waitForPageToLoad(10);
-        elementsPage.alertFrameWindows.click();
+        elementsPage.alertFrameWindowsTiles.click();
+
     }
 
-    @And("user selects {string} option from the side menu")
-    public void user_selects_alerts_option_from_the_side_menu(String string) {
+    @And("user selects Alerts option from the side menu")
+    public void selectsAlertsOptionFromTheSideMenu() {
         BrowserUtils.waitForPageToLoad(10);
         elementsPage.alertOption.click();
-
     }
-
-    @And("user clicks on the {string}")
-    public void userClicksOnTheButton(String string) {
+    @And("user clicks on the On button click alert will appear after five seconds click me button")
+    public void userClicksOnTheOnButtonClickAlertWillAppearAfterSecondsClickMeButton() {
+        BrowserUtils.waitForPageToLoad(10);
         alertsPage.clickMeBtn.click();
 
     }
@@ -42,11 +42,15 @@ public class Alert_steps {
             return true;
         } catch (NoAlertPresentException e) {
             return false;
-        }
 
+        }
 
     }
 
+    @And("close the alert pop up")
+    public void closeTheAlertPopUp() {
+    Alert alert = Driver.getDriver().switchTo().alert();
+    alert.accept();
 
-
+    }
 }
