@@ -19,13 +19,18 @@ public class HomePage extends BasePage {
         @FindBy(xpath = "//button[@aria-label='Expand all']")
         public WebElement plusBtn;
 
-        @FindBy(xpath = "//span[.='Angular'][1]")
+        @FindBy(xpath = "//span[@class='rct-checkbox']/following-sibling::*")
         public WebElement angular;
 
-        @FindBy(xpath = "//span[.='Angular']")
+        @FindBy(xpath = "//span[@class='rct-title'][.='Angular']")
         public WebElement angularText;
 
+        @FindBy(xpath = "//div[.='Alerts, Frame & Windows']")
+        public WebElement alertsFrameWindows;
 
+
+////span[@class='rct-checkbox']/following-sibling::*
+////span[.='Angular'][1]
 }
 
 

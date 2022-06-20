@@ -25,8 +25,5 @@ public class BasePage {
         BrowserUtils.waitForPageToLoad(3);
 
     }
-        @When("user select {string} tile")
-        public void user_select_tile(String string) {
-        elementsTile.click();
-    }
+
 }

@@ -3,11 +3,9 @@ Feature: Alert feature
 
   Background:
     Given user is on homepage
-    When user select Elements tile
 
   Scenario: Verify alert pop up
-    And user selects Alert, Frame, & Windows
+    When user selects Alert Frame & Windows tile
     And user selects Alerts option from the side menu
     And user clicks on the On button click alert will appear after five seconds click me button
-    Then Verify the alert pop up has appeared
-    And close the alert pop up
+    Then Verify the alert pop up has appeared and close the alert pop up

@@ -19,12 +19,12 @@ public class Navigation__Alert_Steps {
     Driver.getDriver().get(ConfigurationReader.getProperty("env"));
     BrowserUtils.waitForPageToLoad(3);
     }
-    @When("user select Elements tile")
+    @When("user selects Elements tile")
     public void user_select_tile() {
         homePage.elementsTile.click();
     }
 
-    @And("user select the Check Box option from the side menu")
+    @And("user selects the Check Box option from the side menu")
     public void user_select_the_option_from_the_side_menu() {
         homePage.checkBox.click();
     }
@@ -33,7 +33,7 @@ public class Navigation__Alert_Steps {
         homePage.plusBtn.click();
     }
 
-    @And("user select Home>Workspace>Angular checkbox")
+    @And("user selects Home>Workspace>Angular checkbox")
     public void user_select_checkbox() {
         homePage.angular.click();
     }
@@ -52,6 +52,7 @@ public class Navigation__Alert_Steps {
 
     @Then("verify the checkbox in not selected")
     public void verify_the_checkbox_in_not_selected() {
+
         if (!homePage.angular.isSelected()) {
             System.out.println("Angular is unchecked");
         } else {

@@ -3,12 +3,12 @@ Feature: Navigate feature
 
   Background:
   Given user is on homepage
-  When user select Elements tile
 
   Scenario: Navigate and verify Angular
-    And user select the Check Box option from the side menu
+    When user selects Elements tile
+    And user selects the Check Box option from the side menu
     And user clicks on the + button on the top right corner
-    And user select Home>Workspace>Angular checkbox
+    And user selects Home>Workspace>Angular checkbox
     Then verify that the selection is Angular checkbox
     And user unchecks Angular checkbox
     Then verify the checkbox in not selected

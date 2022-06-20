@@ -12,8 +12,6 @@ public class ElementsPage extends BasePage {
         PageFactory.initElements(Driver.getDriver(), this);
 
     }
-    @FindBy(xpath = "//div[@class='element-group']//div[text()='Alerts, Frame & Windows']")
-    public WebElement alertFrameWindowsTiles;
 
     @FindBy(xpath = "//span[text()='Alerts']")
     public WebElement alertOption;
