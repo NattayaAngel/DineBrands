@@ -4,7 +4,7 @@ Feature: Alert feature
   Background:
     Given user is on homepage
     When user select Elements tile
-  @wip
+
   Scenario: Verify alert pop up
     And user selects Alert, Frame, & Windows
     And user selects Alerts option from the side menu

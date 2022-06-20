@@ -10,7 +10,6 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
-
 public class Navigation__Alert_Steps {
 
     HomePage homePage = new HomePage();
@@ -18,7 +17,7 @@ public class Navigation__Alert_Steps {
     @Given("user is on homepage")
     public void userIsOnHttpsDemoqaCom() {
     Driver.getDriver().get(ConfigurationReader.getProperty("env"));
-    BrowserUtils.waitForPageToLoad(3000);
+    BrowserUtils.waitForPageToLoad(3);
     }
     @When("user select Elements tile")
     public void user_select_tile() {

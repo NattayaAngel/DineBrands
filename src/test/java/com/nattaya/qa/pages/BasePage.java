@@ -22,7 +22,7 @@ public class BasePage {
         @Given("user is on homepage")
         public void userIsOnHttpsDemoqaCom() {
         Driver.getDriver().get(ConfigurationReader.getProperty("env1"));
-        BrowserUtils.waitForPageToLoad(3000);
+        BrowserUtils.waitForPageToLoad(3);
 
     }
         @When("user select {string} tile")

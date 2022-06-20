@@ -18,9 +18,7 @@ public class Alert_steps {
     public void user_selects_alerts_frame_windows_tile_from_the_side_menu() {
         BrowserUtils.waitForPageToLoad(10);
         elementsPage.alertFrameWindowsTiles.click();
-
     }
-
     @And("user selects Alerts option from the side menu")
     public void selectsAlertsOptionFromTheSideMenu() {
         BrowserUtils.waitForPageToLoad(10);
@@ -30,27 +28,21 @@ public class Alert_steps {
     public void userClicksOnTheOnButtonClickAlertWillAppearAfterSecondsClickMeButton() {
         BrowserUtils.waitForPageToLoad(10);
         alertsPage.clickMeBtn.click();
-
     }
-
     @Then("Verify the alert pop up has appeared")
     public boolean verify_the_alert_pop_up_has_appeared() {
-
         try {
             Driver.getDriver().switchTo().alert();
             BrowserUtils.waitForPageToLoad(10);
             return true;
         } catch (NoAlertPresentException e) {
             return false;
-
         }
-
     }
-
     @And("close the alert pop up")
     public void closeTheAlertPopUp() {
     Alert alert = Driver.getDriver().switchTo().alert();
     alert.accept();
-
     }
 }
+//
