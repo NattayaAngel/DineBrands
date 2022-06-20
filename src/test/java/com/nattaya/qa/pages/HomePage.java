@@ -20,7 +20,7 @@ public class HomePage extends BasePage {
         public WebElement plusBtn;
 
         @FindBy(xpath = "//span[@class='rct-checkbox']/following-sibling::*")
-        public WebElement angular;
+        public WebElement angularCheckBox;
 
         @FindBy(xpath = "//span[@class='rct-title'][.='Angular']")
         public WebElement angularText;

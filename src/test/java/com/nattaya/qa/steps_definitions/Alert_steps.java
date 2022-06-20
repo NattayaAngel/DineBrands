@@ -9,7 +9,6 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Alert_steps {
 
@@ -46,7 +45,7 @@ public class Alert_steps {
         }
     }
 */
-        public static boolean isAlertPresent() {
+        public static boolean verify_the_alert_pop_up_has_appeared_and_close_the_alert() {
             try {
                 BrowserUtils.waitForPageToLoad(10);
                 Driver.getDriver().getTitle();

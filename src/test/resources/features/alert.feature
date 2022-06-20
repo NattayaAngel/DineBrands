@@ -1,5 +1,5 @@
 Feature: Alert feature
-  User Story: As a user, when I click pn alert, I should be able to see alert and verify
+  User Story: As a user, when I click pn alert, I should be able to see alert pop up and verify
 
   Background:
     Given user is on homepage
